@@ -1,0 +1,29 @@
+// Navigation Highlights
+.active-link {
+  color: blue;
+  font-weight: bold !important;
+  border: none;
+}
+.home-link {
+  color: white;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+mat-sidenav-container {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+}
+
+mat-sidenav {
+  position: fixed;
+  top: 64px;
+  bottom: 0;
+  left: 0;
+  padding: 0;
+  min-width: 260px;
+  &.collapsed {
+    top: 56px;
+  }
+}

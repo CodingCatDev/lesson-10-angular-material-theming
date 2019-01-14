@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import 'angular-material-router-theme.scss';
+
+.angular-material-router-app-theme {
+  @include angular-material-theme($angular-material-router-app-theme);
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+:focus {outline: none;} // Remove browser default;

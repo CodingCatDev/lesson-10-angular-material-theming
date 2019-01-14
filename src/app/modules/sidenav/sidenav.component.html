@@ -1,3 +1,31 @@
-<p>
-  sidenav works!
-</p>
+<mat-sidenav-container>
+  <mat-sidenav opened=false mode="over" #snav>
+    <mat-nav-list>
+      <mat-list-item>
+        <h4 matLine routerLink="/welcome"
+        [routerLinkActiveOptions]="{exact:true}"
+        routerLinkActive="active-link">Home</h4>
+      </mat-list-item>
+      <mat-list-item>
+        <h4 matLine routerLink="/books" routerLinkActive="active-link">Books</h4>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+      type="button"
+      aria-label="Toggle sidenav"
+      mat-icon-button
+      (click)="snavToggle(snav)"
+    >
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span fxFlex>
+      <a class="home-link" routerLink=".">{{ title }}</a>
+    </span>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+<!--  -->
