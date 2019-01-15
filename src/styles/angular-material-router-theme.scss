@@ -239,3 +239,70 @@ $angular-material-router-app-theme-warn: mat-dark-theme(
   $angular-material-router-app-primary,
   $angular-material-router-app-warn
 );
+
+@mixin mat-grid-mixin($theme) {
+  $primary: map-get(
+    $map: $theme,
+    $key: primary
+  );
+
+  mat-grid-tile {
+    background-color: mat-color($primary, 500);
+    color: mat-contrast($primary, 500);
+  }
+}
+
+.color-swatch-primary {
+  background-color: mat-color($angular-material-router-app-primary, 500);
+}
+.color-swatch-primary:hover {
+  background-color: mat-color(
+    $angular-material-router-app-primary,
+    500
+  ) !important;
+}
+.color-swatch-green {
+  background-color: mat-color($angular-material-router-app-green, 500);
+}
+.color-swatch-green:hover {
+  background-color: mat-color(
+    $angular-material-router-app-green,
+    500
+  ) !important;
+}
+.color-swatch-pink {
+  background-color: mat-color($angular-material-router-app-pink, 500);
+}
+.color-swatch-pink:hover {
+  background-color: mat-color(
+    $angular-material-router-app-pink,
+    500
+  ) !important;
+}
+.color-swatch-purple {
+  background-color: mat-color($angular-material-router-app-purple, 500);
+}
+.color-swatch-purple:hover {
+  background-color: mat-color(
+    $angular-material-router-app-purple,
+    500
+  ) !important;
+}
+.color-swatch-yellow {
+  background-color: mat-color($angular-material-router-app-yellow, 500);
+}
+.color-swatch-yellow:hover {
+  background-color: mat-color(
+    $angular-material-router-app-yellow,
+    500
+  ) !important;
+}
+.color-swatch-warn {
+  background-color: mat-color($angular-material-router-app-warn, 500);
+}
+.color-swatch-warn:hover {
+  background-color: mat-color(
+    $angular-material-router-app-warn,
+    500
+  ) !important;
+}

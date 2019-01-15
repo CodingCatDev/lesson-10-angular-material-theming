@@ -3,22 +3,34 @@
 @import 'angular-material-router-theme.scss';
 
 .angular-material-router-app-theme {
-  @include angular-material-theme($angular-material-router-app-theme);
+  $theme: $angular-material-router-app-theme;
+  @include angular-material-theme($theme);
+  @include mat-grid-mixin($theme);
 }
 .angular-material-router-app-theme-green {
-  @include angular-material-theme($angular-material-router-app-theme-green);
+  $theme: $angular-material-router-app-theme-green;
+  @include angular-material-theme($theme);
+  @include mat-grid-mixin($theme);
 }
 .angular-material-router-app-theme-yellow {
-  @include angular-material-theme($angular-material-router-app-theme-yellow);
+  $theme: $angular-material-router-app-theme-yellow;
+  @include angular-material-theme($theme);
+  @include mat-grid-mixin($theme);
 }
 .angular-material-router-app-theme-purple {
-  @include angular-material-theme($angular-material-router-app-theme-purple);
+  $theme: $angular-material-router-app-theme-purple;
+  @include angular-material-theme($theme);
+  @include mat-grid-mixin($theme);
 }
 .angular-material-router-app-theme-pink {
-  @include angular-material-theme($angular-material-router-app-theme-pink);
+  $theme: $angular-material-router-app-theme-pink;
+  @include angular-material-theme($theme);
+  @include mat-grid-mixin($theme);
 }
 .angular-material-router-app-theme-warn {
-  @include angular-material-theme($angular-material-router-app-theme-warn);
+  $theme: $angular-material-router-app-theme-warn;
+  @include angular-material-theme($theme);
+  @include mat-grid-mixin($theme);
 }
 
 html,
