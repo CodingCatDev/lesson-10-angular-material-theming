@@ -8,7 +8,7 @@ import { FormControl } from '@angular/forms';
 
 @Component({
   template: `
-    <button>Do the thing</button>
+    <button mat-raised-button color="primary">Do the thing</button>
   `
 })
 export class TestEntryComponent {}

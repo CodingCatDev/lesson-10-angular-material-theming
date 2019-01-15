@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { KitchensinkRoutingModule } from './kitchensink-routing.module';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 import {
   KitchensinkComponent,
   TestEntryComponent
@@ -92,7 +93,8 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     MatStepperModule,
 
     // CDK Modules
-    CdkTableModule
+    CdkTableModule,
+    DragDropModule
   ],
   entryComponents: [TestEntryComponent]
 })
