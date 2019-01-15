@@ -66,11 +66,176 @@ $md-accent: (
     A700: #000000
   )
 );
+
+/* For use in src/lib/core/theming/_palette.scss */
+$md-green: (
+  50: #c2ecb0,
+  100: #93dd73,
+  200: #70d246,
+  300: #4fa729,
+  400: #448f23,
+  500: #38761d,
+  600: #2c5d17,
+  700: #214511,
+  800: #152c0b,
+  900: #091405,
+  A100: #b6fa98,
+  A200: #71f537,
+  A400: #46ae18,
+  A700: #408f1e,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #ffffff,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #ffffff,
+    A700: #ffffff
+  )
+);
+
+$md-yellow: (
+  50: #ffffff,
+  100: #ffffff,
+  200: #ffffff,
+  300: #fff5d6,
+  400: #ffedb8,
+  500: #ffe599,
+  600: #ffdd7a,
+  700: #ffd55c,
+  800: #ffce3d,
+  900: #ffc61f,
+  A100: #ffffff,
+  A200: #ffffff,
+  A400: #fff2cc,
+  A700: #ffecb3,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000,
+    600: #000000,
+    700: #000000,
+    800: #000000,
+    900: #000000,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000
+  )
+);
+
+$md-purple: (
+  50: #ffffff,
+  100: #d3cbe7,
+  200: #b2a5d5,
+  300: #8974be,
+  400: #775fb4,
+  500: #674ea7,
+  600: #5a4492,
+  700: #4d3b7d,
+  800: #403168,
+  900: #342754,
+  A100: #f9f7fd,
+  A200: #b7a2ec,
+  A400: #7c5dcb,
+  A700: #7256b9,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #ffffff,
+    A700: #ffffff
+  )
+);
+
+$md-pink: (
+  50: #ecaccc,
+  100: #dd6ea5,
+  200: #d34189,
+  300: #a62765,
+  400: #8d2156,
+  500: #741b47,
+  600: #5b1538,
+  700: #420f29,
+  800: #290a19,
+  900: #11040a,
+  A100: #fb93c6,
+  A200: #f73193,
+  A400: #ac1660,
+  A700: #8d1c54,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #ffffff,
+    300: #ffffff,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #ffffff,
+    A400: #ffffff,
+    A700: #ffffff
+  )
+);
+
 $angular-material-router-app-primary: mat-palette($md-primary);
 $angular-material-router-app-accent: mat-palette($md-accent);
 $angular-material-router-app-warn: mat-palette($mat-red, 500);
 $angular-material-router-app-theme: mat-light-theme(
   $angular-material-router-app-primary,
   $angular-material-router-app-accent,
+  $angular-material-router-app-warn
+);
+
+$angular-material-router-app-green: mat-palette($md-green);
+$angular-material-router-app-yellow: mat-palette($md-yellow);
+$angular-material-router-app-purple: mat-palette($md-purple);
+$angular-material-router-app-pink: mat-palette($md-pink);
+
+$angular-material-router-app-theme-green: mat-light-theme(
+  $angular-material-router-app-green,
+  $angular-material-router-app-accent,
+  $angular-material-router-app-warn
+);
+$angular-material-router-app-theme-yellow: mat-light-theme(
+  $angular-material-router-app-yellow,
+  $angular-material-router-app-accent,
+  $angular-material-router-app-warn
+);
+$angular-material-router-app-theme-purple: mat-dark-theme(
+  $angular-material-router-app-purple,
+  $angular-material-router-app-accent,
+  $angular-material-router-app-warn
+);
+$angular-material-router-app-theme-pink: mat-light-theme(
+  $angular-material-router-app-pink,
+  $angular-material-router-app-accent,
+  $angular-material-router-app-warn
+);
+$angular-material-router-app-theme-warn: mat-dark-theme(
+  $angular-material-router-app-warn,
+  $angular-material-router-app-primary,
   $angular-material-router-app-warn
 );

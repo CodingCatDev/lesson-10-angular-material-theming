@@ -1,34 +1,71 @@
 <mat-sidenav-container>
-  <mat-sidenav opened=false mode="over" #snav>
+  <mat-sidenav opened="false" mode="over" #snav>
     <mat-nav-list>
       <mat-list-item>
-        <h4 matLine routerLink="/welcome"
-        [routerLinkActiveOptions]="{exact:true}"
-        routerLinkActive="active-link">Home</h4>
+        <h4
+          matLine
+          routerLink="/welcome"
+          [routerLinkActiveOptions]="{ exact: true }"
+          routerLinkActive="active-link"
+        >
+          Home
+        </h4>
       </mat-list-item>
       <mat-list-item>
-        <h4 matLine routerLink="/kitchensink"
-        [routerLinkActiveOptions]="{exact:true}"
-        routerLinkActive="active-link">Kitchen Sink</h4>
+        <h4
+          matLine
+          routerLink="/kitchensink"
+          [routerLinkActiveOptions]="{ exact: true }"
+          routerLinkActive="active-link"
+        >
+          Kitchen Sink
+        </h4>
       </mat-list-item>
       <mat-list-item>
-        <h4 matLine routerLink="/books" routerLinkActive="active-link">Books</h4>
+        <h4 matLine routerLink="/books" routerLinkActive="active-link">
+          Books
+        </h4>
       </mat-list-item>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar color="primary">
       <button
-      type="button"
-      aria-label="Toggle sidenav"
-      mat-icon-button
-      (click)="snavToggle(snav)"
-    >
-      <mat-icon>menu</mat-icon>
-    </button>
-    <span fxFlex>
-      <a class="home-link" routerLink=".">{{ title }}</a>
-    </span>
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="snavToggle(snav)"
+      >
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span fxFlex>
+        <a class="home-link" routerLink=".">{{ title }}</a>
+      </span>
+      <span fxFlex="nogrow">
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+          <mat-icon>format_color_fill</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item (click)="pickColor('')">
+            <div class="color-swatch color-swatch-primary" mat-menu-item></div>
+          </button>
+          <button mat-menu-item (click)="pickColor('green')">
+            <div class="color-swatch color-swatch-green" mat-menu-item></div>
+          </button>
+          <button mat-menu-item (click)="pickColor('pink')">
+            <div class="color-swatch color-swatch-pink" mat-menu-item></div>
+          </button>
+          <button mat-menu-item (click)="pickColor('purple')">
+            <div class="color-swatch color-swatch-purple" mat-menu-item></div>
+          </button>
+          <button mat-menu-item (click)="pickColor('yellow')">
+            <div class="color-swatch color-swatch-yellow" mat-menu-item></div>
+          </button>
+          <button mat-menu-item (click)="pickColor('warn')">
+            <div class="color-swatch color-swatch-warn" mat-menu-item></div>
+          </button>
+        </mat-menu>
+      </span>
     </mat-toolbar>
     <router-outlet></router-outlet>
   </mat-sidenav-content>

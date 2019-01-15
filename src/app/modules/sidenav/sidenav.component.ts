@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild, OnDestroy } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { MatSidenav } from '@angular/material';
 import { Subscription } from 'rxjs';
+import { ColorPickerService } from 'src/app/core/services/color-picker.service';
 
 @Component({
   selector: 'app-sidenav',
@@ -12,7 +13,10 @@ export class SidenavComponent implements OnInit, OnDestroy {
   @ViewChild('snav') public sidenav: MatSidenav;
   routerSub: Subscription;
   title = 'Lesson 9 - Angular Material Router Outlet';
-  constructor(private router: Router) {}
+  constructor(
+    private router: Router,
+    private colorPicker: ColorPickerService
+  ) {}
   // This will be used for closing the sidenav drawer and scrolling to the top of screen
   ngOnInit() {
     this.routerSub = this.router.events.subscribe(event => {
@@ -31,4 +35,14 @@ export class SidenavComponent implements OnInit, OnDestroy {
   snavToggle(snav) {
     snav.toggle();
   }
+  pickColor(color: string) {
+    let colorTheme = '';
+    if (color !== '') {
+      colorTheme = `-${color}`;
+    }
+    this.colorPicker.setColorClass(
+      `angular-material-router-app-theme${colorTheme}`
+    );
+  }
+  openThemeMenu() {}
 }

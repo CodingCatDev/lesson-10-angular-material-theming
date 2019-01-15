@@ -5,7 +5,30 @@
 .angular-material-router-app-theme {
   @include angular-material-theme($angular-material-router-app-theme);
 }
+.angular-material-router-app-theme-green {
+  @include angular-material-theme($angular-material-router-app-theme-green);
+}
+.angular-material-router-app-theme-yellow {
+  @include angular-material-theme($angular-material-router-app-theme-yellow);
+}
+.angular-material-router-app-theme-purple {
+  @include angular-material-theme($angular-material-router-app-theme-purple);
+}
+.angular-material-router-app-theme-pink {
+  @include angular-material-theme($angular-material-router-app-theme-pink);
+}
+.angular-material-router-app-theme-warn {
+  @include angular-material-theme($angular-material-router-app-theme-warn);
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-:focus {outline: none;} // Remove browser default;
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+:focus {
+  outline: none;
+} // Remove browser default;
