@@ -27,3 +27,21 @@ mat-sidenav {
     top: 56px;
   }
 }
+mat-sidenav-content {
+  padding-top: 70px;
+  min-height: calc(100vh - 70px);
+}
+
+// Fix toolbar to top of screen
+mat-toolbar.mat-toolbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+  font-size: 20px;
+  mat-toolbar-row {
+    padding: 0 16px 0 0;
+  }
+}

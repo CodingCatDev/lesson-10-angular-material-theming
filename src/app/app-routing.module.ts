@@ -11,6 +11,10 @@ const routes: Routes = [
     loadChildren: './modules/books/books.module#BooksModule'
   },
   {
+    path: 'kitchensink',
+    loadChildren: './modules/kitchensink/kitchensink.module#KitchensinkModule'
+  },
+  {
     path: '',
     redirectTo: '/welcome',
     pathMatch: 'full'

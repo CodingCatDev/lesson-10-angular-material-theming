@@ -1,0 +1,6 @@
+@import '../../../styles/angular-material-router-theme.scss';
+
+mat-grid-tile {
+  background: mat-color($angular-material-router-app-primary, 500);
+  color: mat-contrast($angular-material-router-app-primary, 500);
+}
