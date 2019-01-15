@@ -6,13 +6,17 @@ import { OverlayContainer } from '@angular/cdk/overlay';
   providedIn: 'root'
 })
 export class ColorPickerService {
-  colorClass$: BehaviorSubject<string> = new BehaviorSubject(
-    'angular-material-router-app-theme'
-  );
+  initialClass = 'angular-material-router-app-theme';
+  colorClass$: BehaviorSubject<string> = new BehaviorSubject(this.initialClass);
   constructor(private overlayContainer: OverlayContainer) {
-    overlayContainer
-      .getContainerElement()
-      .classList.add('angular-material-router-app-theme');
+    const storageClass = localStorage.getItem('color-picker');
+    console.log(storageClass);
+    if (storageClass) {
+      overlayContainer.getContainerElement().classList.add(storageClass);
+      this.colorClass$.next(storageClass);
+    } else {
+      overlayContainer.getContainerElement().classList.add(this.initialClass);
+    }
   }
   getColorClass() {
     return this.colorClass$;
@@ -23,5 +27,6 @@ export class ColorPickerService {
     });
     this.overlayContainer.getContainerElement().classList.add(className);
     this.colorClass$.next(className);
+    localStorage.setItem('color-picker', className);
   }
 }
