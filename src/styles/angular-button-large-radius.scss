@@ -1,0 +1,9 @@
+@import 'angular-material-router-theme.scss';
+
+@mixin angular-button-large-radius {
+  .mat-raised-button,
+  .mat-stroked-button,
+  .mat-flat-button {
+    border-radius: 45px;
+  }
+}
