@@ -1,5 +1,10 @@
 {
-  "name": "angular-material-router-outlet",
+  "name": "angular-material-theming",
+  "author": {
+    "name": "Alex Patterson",
+    "email": "developer@ajonp.com",
+    "url": "https://ajonp.com"
+  },
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
