@@ -12,7 +12,7 @@ import { ColorPickerService } from 'src/app/core/services/color-picker.service';
 export class SidenavComponent implements OnInit, OnDestroy {
   @ViewChild('snav') public sidenav: MatSidenav;
   routerSub: Subscription;
-  title = 'Lesson 10 - Angular Material Theming';
+  title = 'Angular Material Theming';
   constructor(
     private router: Router,
     private colorPicker: ColorPickerService
