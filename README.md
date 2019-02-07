@@ -1,3 +1,11 @@
+# AJonP - Resources
+🎥 YouTube: https://bit.ly/ajonp-youtube-sub  
+🌎 Site: https://ajonp.com  
+📦 GitHub: https://github.com/ajonpllc  
+🎓Lessons: https://ajonp.com/lessons/   
+🗞AJ’s Week in Web: https://bit.ly/aj-week-in-web   
+💬 Slack: https://bit.ly/ajonp-slack-invite   
+🐦 Twitter: https://bit.ly/ajonp-twitter  
 
 > I was a little rushed on this lesson/video so if you have any questions jump on the [Slack Channel](https://ajonp-com.slack.com/join/shared_invite/enQtNDk4NjMyNDUxMzM0LWQwMThkZDE3MDAzNzVmNWE3N2M1NzkwMzg1YWQ5NzIxZmIyYTM3ZjEyOGU3YjQ0NTFkYzRmZjMyYzExNDNlNTg)
 
